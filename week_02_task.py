@@ -1,5 +1,3 @@
-from selectors import SelectSelector
-
 F. Type identification & Casting
 Use Case 1:
 Write a program that asks for an employee’s age.

@@ -240,3 +240,48 @@ generate_invoice(
     Guava=50,
     Banana=20
 )
+
+
+Use Case 6: Import vs from import
+Create simple functions like add(a,b) and div(a,b) that  returns sum and division of 2 input.
+Create a package/sub package/generic_functions.py and place this function .
+Create another package/sub package/consumer.py and import the above 2 functions using import, from import with and without alias.
+
+Sol:
+====
+import fundamental.fundamental2.generic_functions
+var1 = fundamental.fundamental2.generic_functions.add(10, 20)
+var2 = fundamental.fundamental2.generic_functions.div(100,10)
+print(var1, var2)
+
+import fundamental.fundamental2.generic_functions as add1
+var1 = add1.add(10, 20)
+var2 = add1.div(100,10)
+print(var1, var2)
+
+from fundamental.fundamental2.generic_functions import add, div
+var1 = add(10, 20)
+var2 = div(100, 10)
+print(var1, var2)
+
+from fundamental.fundamental2.generic_functions import add as ad, div as dv
+var1 = ad(10, 20)
+var2 = dv(100, 10)
+print(var1, var2)
+
+
+
+Use Case 7: global vs local variable
+Create a functions add(a,b) that stores the result of a+b to variable c and make the variable c as global variable that should be accessible outside of the function after executing the function.
+
+Sol:
+====
+def add(a, b):
+    global c
+    c = a + b
+
+add(10, 20)
+print(c)
+
+
+
